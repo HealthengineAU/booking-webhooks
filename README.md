@@ -10,7 +10,7 @@ The table below shows the events that currently support webhooks.
 
 | Event Name | Description |
 |---|---|
-| `booking-submitted` | A booking was made using the HealthEngine platform. |
+| [`booking-submitted`](#booking-submitted) | A booking was made using the HealthEngine platform. |
 
 ## Event Details
 
@@ -23,7 +23,7 @@ Some general notes and limitations of event webhooks:
 - A maximum of 3 retries are made before the webhook is marked as failed,
 - The retries have a backoff strategy of 5 minutes, 1 hour and 12 hours,
 - Webhooks will only be delivered to HTTPS,
-- A webhook subscription must be confirmed before events are sent (see below),
+- A webhook subscription must be confirmed before events are sent ([see below](#subscribing-to-an-event)),
 - A response must be received within 5 seconds or the request will be terminated. Any long running process should be triggered asynchronously,
 
 ### `booking-submitted`
