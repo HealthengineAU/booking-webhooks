@@ -82,3 +82,10 @@ _Note:_ Since the configured endpoint can receive payloads of different formats,
 _Note:_ The `confirmation_url` is only valid for 1 hour.
 
 _Note:_ When making the confirmation request, you must set the Accept header to application/json. The response has the format: `{"success": true}`.
+
+## Whitelist IP
+To secure your endpoint it is suggested to whitelist HealthEngines IP address being:
+
+- 13.55.48.1
+- 52.62.53.70
+- 13.54.122.64
