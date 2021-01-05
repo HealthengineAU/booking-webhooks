@@ -55,7 +55,12 @@ This event is triggered after a booking has been made within the HealthEngine pl
             "email": "noreply@healthengine.com.au",
             "firstname": "Jane",
             "lastname": "Blogs",
-            "mobile_phone": "0412345678"
+            "mobile_phone": "0412345678",
+            "medicare": {
+                "number": "xxxx",
+                "reference": "xxx",
+                "expiry": "xxx",
+            }
         },
     }
 }
