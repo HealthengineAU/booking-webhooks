@@ -36,6 +36,11 @@ This event is triggered after a booking has been made within the HealthEngine pl
     "type": "booking-submitted",
     "data": {
         "booking_id": "1234",
+        "appointment": {
+            datetime: "2020-01-01 10:00",
+            type: "General Appointment",
+            timezone: "Australia/Sydney"
+        }
         "practice": {
             "id": "9876"
         },
