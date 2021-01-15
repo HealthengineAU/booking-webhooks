@@ -35,9 +35,14 @@ This event is triggered after a booking has been made within the HealthEngine pl
     "version": 1,
     "type": "booking-submitted",
     "data": {
+        "appointment": {
+            "datetime": 1577808000,
+            "type": "General Appointment"
+        },
         "booking_id": "1234",
         "practice": {
-            "id": "9876"
+            "id": "9876",
+            "timezone": "Australia/Perth"
         },
         "patient": {
             "address": {
@@ -50,6 +55,11 @@ This event is triggered after a booking has been made within the HealthEngine pl
             "email": "noreply@healthengine.com.au",
             "firstname": "Jane",
             "lastname": "Blogs",
+            "medicare": null | {
+                "expiry": "01/2022",
+                "number": "1",
+                "reference": "1234 56789 0"
+            },
             "mobile_phone": "0412345678"
         },
     }
