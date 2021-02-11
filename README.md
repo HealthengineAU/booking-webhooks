@@ -66,6 +66,37 @@ This event is triggered after a booking has been made within the HealthEngine pl
 }
 ```
 
+### `booking-cancelled`
+
+This event is triggered after a booking has been made cancelled on the HealthEngine platform. An example payload is shown below.
+
+```json
+{
+    "version": 1,
+    "type": "booking-cancelled",
+    "data": {
+        "booking_id": "1234",
+        "practice": {
+            "id": "9876",
+        },
+        "patient": {
+            "address": {
+                "postcode": "6000",
+                "state": "WA",
+                "street": "Wellington St",
+                "suburb": "Perth"
+            },
+            "dob": "1970-01-01",
+            "email": "noreply@healthengine.com.au",
+            "firstname": "Jane",
+            "lastname": "Blogs",
+            "mobile_phone": "0412345678"
+        },
+        "cancelled_time": 1537809000
+    }
+}
+```
+
 ## Subscribing to an event
 
 Before real events are sent, the webhook URL subscription must be confirmed. This ensures that the URL is valid and correct.  
