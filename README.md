@@ -11,6 +11,7 @@ The table below shows the events that currently support webhooks.
 | Event Name | Description |
 |---|---|
 | [`booking-submitted`](#booking-submitted) | A booking was made using the HealthEngine platform. |
+| [`booking-cancelled`](#booking-cancelled) | A booking has been cancelled on the HealthEngine platform. |
 
 ## Event Details
 
