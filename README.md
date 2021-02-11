@@ -68,7 +68,7 @@ This event is triggered after a booking has been made within the HealthEngine pl
 
 ### `booking-cancelled`
 
-This event is triggered after a booking has been made cancelled on the HealthEngine platform. An example payload is shown below.
+This event is triggered after a booking has been cancelled on the HealthEngine platform. An example payload is shown below.
 
 ```json
 {
