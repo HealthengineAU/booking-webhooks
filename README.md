@@ -114,7 +114,7 @@ This event is triggered after a pre-screening form has been submitted on the Hea
     "pre_screening_form": {
       "question_answers": [
         {
-          "id": "aeb110ab-6446-481b-b383-908be888fe37", // question ID
+          "question_id": "aeb110ab-6446-481b-b383-908be888fe37",
           "answer": {
             "value": true | false
           },
@@ -122,7 +122,7 @@ This event is triggered after a pre-screening form has been submitted on the Hea
           "variant": "YES_NO"
         },
         {
-          "id": "f98ae1df-b110-4e0f-83a6-fe6b69a28c48", // question ID
+          "question_id": "f98ae1df-b110-4e0f-83a6-fe6b69a28c48",
           "answer": {
             "value": true | false,
             "specification": "I am a nurse." | null
@@ -133,11 +133,11 @@ This event is triggered after a pre-screening form has been submitted on the Hea
       ],
       "consents_accepted": [
         {
-          "id": "f98ae1df-b110-4e0f-83a6-fe6b69a28c48", // consent ID
+          "consent_id": "f98ae1df-b110-4e0f-83a6-fe6b69a28c48",
           "consent_wording": "I have been informed of, and agree to pay the fees."
         },
         {
-          "id": "0b039374-5f98-4078-917d-659505528723", // consent ID
+          "consent_id": "0b039374-5f98-4078-917d-659505528723",
           "consent_wording": "I request to have each vaccine and understand that it is completely voluntary."
         }
       ]
