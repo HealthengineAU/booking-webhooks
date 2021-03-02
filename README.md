@@ -38,7 +38,8 @@ This event is triggered after a booking has been made within the HealthEngine pl
     "data": {
         "appointment": {
             "datetime": 1577808000,
-            "type": "General Appointment"
+            "type": "General Appointment",
+            "specialty": "General Practice"
         },
         "booking_id": "1234",
         "practice": {
