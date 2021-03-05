@@ -145,19 +145,6 @@ This event is triggered after a pre-screening form has been submitted on the Hea
     "practice": {
       "id": "9876"
     },
-    "patient": {
-      "address": {
-        "postcode": "6000",
-        "state": "WA",
-        "street": "Wellington St",
-        "suburb": "Perth"
-      },
-      "dob": "1970-01-01",
-      "email": "noreply@healthengine.com.au",
-      "firstname": "Jane",
-      "lastname": "Blogs",
-      "mobile_phone": "0412345678"
-    },
     "submitted_at": 1537809000
   }
 }
