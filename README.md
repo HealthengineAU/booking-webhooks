@@ -145,19 +145,6 @@ This event is triggered after a pre-screening form has been submitted on the Hea
     "practice": {
       "id": "9876"
     },
-    "patient": {
-      "address": {
-        "postcode": "6000",
-        "state": "WA",
-        "street": "Wellington St",
-        "suburb": "Perth"
-      },
-      "dob": "1970-01-01",
-      "email": "noreply@healthengine.com.au",
-      "firstname": "Jane",
-      "lastname": "Blogs",
-      "mobile_phone": "0412345678"
-    },
     "submitted_at": 1537809000
   }
 }
@@ -165,9 +152,9 @@ This event is triggered after a pre-screening form has been submitted on the Hea
 
 ## Subscribing to an event
 
-Before real events are sent, the webhook URL subscription must be confirmed. This ensures that the URL is valid and correct.  
-When a new webhook is configured, an example payload is sent to the URL with the JSON payload below.  
-The third party must retrieve the confirmation_url from the body and make a HTTPS request to that endpoint to confirm the subscription.  
+Before real events are sent, the webhook URL subscription must be confirmed. This ensures that the URL is valid and correct.
+When a new webhook is configured, an example payload is sent to the URL with the JSON payload below.
+The third party must retrieve the confirmation_url from the body and make a HTTPS request to that endpoint to confirm the subscription.
 Once we receive this request the webhook will be enabled and events will begin being delivered to the endpoint.
 
 ```json
