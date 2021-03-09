@@ -129,16 +129,16 @@ This event is triggered after a pre-screening form has been submitted on the Hea
           },
           "question_wording": "You have an occupation or lifestyle factor(s) for which vaccination may be needed (discuss with doctor/pharmacist/nurse). Please specify below:",
           "variant": "YES_NO_SPECIFY"
-        }
-      ],
-      "consents_accepted": [
-        {
-          "consent_id": "f98ae1df-b110-4e0f-83a6-fe6b69a28c48",
-          "consent_wording": "I have been informed of, and agree to pay the fees."
         },
         {
-          "consent_id": "0b039374-5f98-4078-917d-659505528723",
-          "consent_wording": "I request to have each vaccine and understand that it is completely voluntary."
+          "question_id": "0b039374-5f98-4078-917d-659505528723",
+          "question_wording": "Before any vaccination takes place, clinic staff should ask you:
+- Is this a bullet point?
+- Is **this** in bold?
+- Is _this_ italicised?
+",
+          "answer": null,
+          "variant": "INFORMATION"
         }
       ]
     },
