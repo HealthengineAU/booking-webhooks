@@ -187,7 +187,9 @@ This event is triggered after a booking has been marked as attended on the Healt
           "reference": "1234 56789 0"
         },
       "mobile_phone": "0412345678"
-    }
+    },
+    "attended": true|false,
+    "attended_changed_at": 1577808000,
   }
 }
 ```
