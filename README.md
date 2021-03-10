@@ -13,6 +13,7 @@ The table below shows the events that currently support webhooks.
 | [`booking-submitted`](#booking-submitted)                             | A booking was made using the HealthEngine platform.                            |
 | [`booking-cancelled`](#booking-cancelled)                             | A booking has been cancelled on the HealthEngine platform.                     |
 | [`booking-pre-screening-submitted`](#booking-pre-screening-submitted) | A booking has had a pre-screening form submitted on the HealthEngine platform. |
+| [`booking-marked-attended`](#booking-marked-attended)                 | A booking has been marked as attended on the HealthEngine platform.            |
 
 ## Event Details
 
@@ -146,6 +147,47 @@ This event is triggered after a pre-screening form has been submitted on the Hea
       "id": "9876"
     },
     "submitted_at": 1537809000
+  }
+}
+```
+
+### `booking-marked-attended`
+
+This event is triggered after a booking has been marked as attended on the HealthEngine platform. An example payload is shown below.
+
+```json
+{
+  "version": 1,
+  "type": "booking-marked-attended",
+  "data": {
+    "appointment": {
+      "datetime": 1577808000,
+    },
+    "booking_id": "1234",
+    "practice": {
+      "id": "9876",
+      "name": "Practice Name"
+    },
+    "patient": {
+      "address": {
+        "postcode": "6000",
+        "state": "WA",
+        "street": "Wellington St",
+        "suburb": "Perth"
+      },
+      "dob": "1970-01-01",
+      "email": "noreply@healthengine.com.au",
+      "firstname": "Jane",
+      "lastname": "Blogs",
+      "medicare":
+        null |
+        {
+          "expiry": "01/2022",
+          "number": "1",
+          "reference": "1234 56789 0"
+        },
+      "mobile_phone": "0412345678"
+    }
   }
 }
 ```
