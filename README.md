@@ -22,7 +22,7 @@ Webhooks are configured per-practice and will be delivered to the practice’s c
 Some general notes and limitations of event webhooks:
 
 - Due to the highly available and redundant architecture, duplicate webhooks may be sent, including simultaneously,
-- If the HTTP response code is not 200, the webhook will be retried,
+- If the HTTP response code is not 2xx or 400, the webhook will be retried,
 - A maximum of 3 retries are made before the webhook is marked as failed,
 - The retries have a backoff strategy of 5 minutes, 1 hour and 12 hours,
 - Webhooks will only be delivered to HTTPS,
@@ -161,7 +161,7 @@ This event is triggered after a booking has been marked as attended on the Healt
   "type": "booking-marked-attended",
   "data": {
     "appointment": {
-      "datetime": 1577808000,
+      "datetime": 1577808000
     },
     "booking_id": "1234",
     "practice": {
@@ -188,11 +188,23 @@ This event is triggered after a booking has been marked as attended on the Healt
         },
       "mobile_phone": "0412345678"
     },
-    "attended": true|false,
-    "attended_changed_at": 1577808000,
+    "attended": true | false,
+    "attended_changed_at": 1577808000
   }
 }
 ```
+
+## Expected Responses
+
+- Any 2xx response code will be treated as successful, any body returned will be discarded.
+- A 400 response code can be returned to signify issues with the message, in which case it will not be retried. It is recommended that the response include a payload with a description of the issue. eg.
+  ```json
+  {
+    "error_code": "A-unique-code-to-this-type-of-error",
+    "error_message": "A more descriptive explanation of the error"
+  }
+  ```
+- Any other response code will be treated as a failure that should be retried as detailed above.
 
 ## Subscribing to an event
 
