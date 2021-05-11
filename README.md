@@ -45,7 +45,11 @@ This event is triggered after a booking has been made within the HealthEngine pl
     "booking_id": "1234",
     "practice": {
       "id": "9876",
-      "timezone": "Australia/Perth"
+      "timezone": "Australia/Perth",
+      "name": "Sample Practice WA",
+      "address": {
+        "postcode": "6000",
+      },
     },
     "patient": {
       "address": {
