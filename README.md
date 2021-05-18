@@ -70,7 +70,12 @@ This event is triggered after a booking has been made within the HealthEngine pl
           "reference": "1234 56789 0"
         },
       "mobile_phone": "0412345678"
-    }
+    },
+    "external_user":
+      null |
+      {
+        "id": "12345"
+      }
   }
 }
 ```
