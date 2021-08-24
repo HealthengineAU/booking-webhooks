@@ -43,6 +43,7 @@ This event is triggered after a booking has been made within the HealthEngine pl
       "type": "General Appointment"
     },
     "booking_id": "1234",
+    "manage_booking_url": "/patient/booking/1234/9876/success/{$cancellationKey}{$pathAction}?lang=en",
     "practice": {
       "id": "9876",
       "timezone": "Australia/Perth",
