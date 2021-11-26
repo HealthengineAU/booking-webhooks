@@ -21,6 +21,7 @@ Webhooks are configured per-practice and will be delivered to the practice’s c
 
 Some general notes and limitations of event webhooks:
 
+- Imported bookings from data migrations will not trigger booking webhooks.
 - Due to the highly available and redundant architecture, duplicate webhooks may be sent, including simultaneously,
 - If the HTTP response code is not 2xx or 400, the webhook will be retried,
 - A maximum of 3 retries are made before the webhook is marked as failed,
