@@ -83,6 +83,17 @@ This event is triggered after a booking has been made within the HealthEngine pl
 }
 ```
 
+If the booking is associated with a corporate group (directly via the booking model, or via the booking practice), we conditionally attach a corporate group fragment:
+
+```json
+{
+  ...,
+  "corporate_group": {
+    "id": "1234",
+    "name": "Terry Green"
+  }
+}
+
 ### `booking-cancelled`
 
 This event is triggered after a booking has been cancelled on the HealthEngine platform. An example payload is shown below.
@@ -113,6 +124,17 @@ This event is triggered after a booking has been cancelled on the HealthEngine p
   }
 }
 ```
+
+If the booking is associated with a corporate group (directly via the booking model, or via the booking practice), we conditionally attach a corporate group fragment:
+
+```json
+{
+  ...,
+  "corporate_group": {
+    "id": "1234",
+    "name": "Terry Green"
+  }
+}
 
 ### `booking-pre-screening-submitted`
 
