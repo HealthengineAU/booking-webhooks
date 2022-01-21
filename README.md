@@ -87,7 +87,6 @@ If the booking is associated with a corporate group (directly via the booking mo
 
 ```json
 {
-  ...,
   "corporate_group": {
     "id": "1234",
     "name": "Terry Green"
@@ -129,7 +128,6 @@ If the booking is associated with a corporate group (directly via the booking mo
 
 ```json
 {
-  ...,
   "corporate_group": {
     "id": "1234",
     "name": "Terry Green"
