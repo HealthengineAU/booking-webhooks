@@ -45,6 +45,13 @@ This event is triggered after a booking has been made within the HealthEngine pl
       "specialty": "General Practice"
     },
     "booking_id": "1234",
+    "booker": null |
+      {
+        "firstname": "Joe",
+        "lastname": "Blogs",
+        "email": "no-reply@healthengine.com.au",
+        "mobile_phone": "0412345678"
+      },
     "manage_booking_url": "https://www.google.com",
     "practice": {
       "id": "9876",
@@ -78,7 +85,8 @@ This event is triggered after a booking has been made within the HealthEngine pl
       null |
       {
         "id": "12345"
-      }
+      },
+    "voucher_code": null | "ABC123"
   }
 }
 ```
