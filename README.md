@@ -11,6 +11,7 @@ The table below shows the events that currently support webhooks.
 | Event Name                                                            | Description                                                                    |
 | --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [`booking-submitted`](#booking-submitted)                             | A booking was made using the HealthEngine platform.                            |
+| [`booking-updated`](#booking-updated)                                 | A booking was updated on the HealthEngine platform.                            |
 | [`booking-cancelled`](#booking-cancelled)                             | A booking has been cancelled on the HealthEngine platform.                     |
 | [`booking-pre-screening-submitted`](#booking-pre-screening-submitted) | A booking has had a pre-screening form submitted on the HealthEngine platform. |
 | [`booking-marked-attended`](#booking-marked-attended)                 | A booking has been marked as attended on the HealthEngine platform.            |
@@ -38,6 +39,82 @@ This event is triggered after a booking has been made within the HealthEngine pl
 {
   "version": 1,
   "type": "booking-submitted",
+  "data": {
+    "appointment": {
+      "datetime": 1577808000,
+      "type": "General Appointment",
+      "specialty": "General Practice"
+    },
+    "booking_id": "1234",
+    "booker": null |
+      {
+        "firstname": "Joe",
+        "lastname": "Blogs",
+        "email": "no-reply@healthengine.com.au",
+        "mobile_phone": "0412345678"
+      },
+    "manage_booking_url": "https://www.google.com",
+    "practice": {
+      "id": "9876",
+      "timezone": "Australia/Perth",
+      "name": "Sample Practice WA",
+      "address": {
+        "postcode": "6000",
+      },
+    },
+    "patient": {
+      "address": {
+        "postcode": "6000",
+        "state": "WA",
+        "street": "Wellington St",
+        "suburb": "Perth"
+      },
+      "dob": "1970-01-01",
+      "email": "noreply@healthengine.com.au",
+      "firstname": "Jane",
+      "lastname": "Blogs",
+      "medicare":
+        null |
+        {
+          "expiry": "01/2022",
+          "number": "1",
+          "reference": "1234 56789 0"
+        },
+      "mobile_phone": "0412345678"
+    },
+    "external_user":
+      null |
+      {
+        "id": "12345"
+      },
+    "voucher_code": null | "ABC123"
+  }
+}
+```
+
+### `booking-updated`
+
+This event is triggered after a booking has been updated within the HealthEngine platform.
+
+At this time the only updateable fields are:
+- Patient Details:
+  - email
+  - mobile_phone
+  - firstname
+  - lastname
+  - address
+- Booker Details:
+  - email
+  - mobile_phone
+  - firstname
+  - lastname
+  
+An example payload is shown below.
+
+```json
+{
+  "version": 1,
+  "type": "booking-updated",
   "data": {
     "appointment": {
       "datetime": 1577808000,
