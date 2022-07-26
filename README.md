@@ -1,20 +1,20 @@
-# HealthEngine Booking Webhooks
+# Healthengine Booking Webhooks
 
-Documentation for booking webhooks from the HealthEngine platform.
+Documentation for booking webhooks from the Healthengine platform.
 
 ## Synopsis
 
-Webhooks can be utilised to notify external parties of booking events that have occurred within the HealthEngine platform.
+Webhooks can be utilised to notify external parties of booking events that have occurred within the Healthengine platform.
 
 The table below shows the events that currently support webhooks.
 
 | Event Name                                                            | Description                                                                    |
 | --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [`booking-submitted`](#booking-submitted)                             | A booking was made using the HealthEngine platform.                            |
-| [`booking-updated`](#booking-updated)                                 | A booking was updated on the HealthEngine platform.                            |
-| [`booking-cancelled`](#booking-cancelled)                             | A booking has been cancelled on the HealthEngine platform.                     |
-| [`booking-pre-screening-submitted`](#booking-pre-screening-submitted) | A booking has had a pre-screening form submitted on the HealthEngine platform. |
-| [`booking-marked-attended`](#booking-marked-attended)                 | A booking has been marked as attended on the HealthEngine platform.            |
+| [`booking-submitted`](#booking-submitted)                             | A booking was made using the Healthengine platform.                            |
+| [`booking-updated`](#booking-updated)                                 | A booking was updated on the Healthengine platform.                            |
+| [`booking-cancelled`](#booking-cancelled)                             | A booking has been cancelled on the Healthengine platform.                     |
+| [`booking-pre-screening-submitted`](#booking-pre-screening-submitted) | A booking has had a pre-screening form submitted on the Healthengine platform. |
+| [`booking-marked-attended`](#booking-marked-attended)                 | A booking has been marked as attended on the Healthengine platform.            |
 
 ## Event Details
 
@@ -33,7 +33,7 @@ Some general notes and limitations of event webhooks:
 
 ### `booking-submitted`
 
-This event is triggered after a booking has been made within the HealthEngine platform. An example payload is shown below.
+This event is triggered after a booking has been made within the Healthengine platform. An example payload is shown below.
 
 ```json
 {
@@ -94,7 +94,7 @@ This event is triggered after a booking has been made within the HealthEngine pl
 
 ### `booking-updated`
 
-This event is triggered after a booking has been updated within the HealthEngine platform.
+This event is triggered after a booking has been updated within the Healthengine platform.
 
 At this time the only updateable fields are:
 - Patient Details:
@@ -170,7 +170,7 @@ An example payload is shown below.
 
 ### `booking-cancelled`
 
-This event is triggered after a booking has been cancelled on the HealthEngine platform. An example payload is shown below.
+This event is triggered after a booking has been cancelled on the Healthengine platform. An example payload is shown below.
 
 ```json
 {
@@ -201,7 +201,7 @@ This event is triggered after a booking has been cancelled on the HealthEngine p
 
 ### `booking-pre-screening-submitted`
 
-This event is triggered after a pre-screening form has been submitted on the HealthEngine platform. An example payload is shown below.
+This event is triggered after a pre-screening form has been submitted on the Healthengine platform. An example payload is shown below.
 
 ```json
 {
@@ -250,7 +250,7 @@ This event is triggered after a pre-screening form has been submitted on the Hea
 
 ### `booking-marked-attended`
 
-This event is triggered after a booking has been marked as attended on the HealthEngine platform. An example payload is shown below.
+This event is triggered after a booking has been marked as attended on the Healthengine platform. An example payload is shown below.
 
 ```json
 {
@@ -332,7 +332,7 @@ _Note:_ When making the confirmation request, you must set the Accept header to 
 
 ## Whitelist IPs
 
-To secure your endpoint it is suggested to whitelist HealthEngine's IP addresses being:
+To secure your endpoint it is suggested to whitelist Healthengine's IP addresses being:
 
 - 13.55.48.1
 - 52.62.53.70
