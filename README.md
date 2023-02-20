@@ -87,7 +87,17 @@ This event is triggered after a booking has been made within the Healthengine pl
       {
         "id": "12345"
       },
-    "voucher_code": null | "ABC123"
+    "voucher_code": null | "ABC123",
+    "external_payments": null | {
+      "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
+      "amount": 1700,
+      "refunded": false
+    },
+    "exclusive_scheduling": null | {
+      "client": "Things Inc.",
+      "location": "123 Fake St",
+      "additional_message": "Knock twice and provide secret password"
+    }
   }
 }
 ```
@@ -97,6 +107,7 @@ This event is triggered after a booking has been made within the Healthengine pl
 This event is triggered after a booking has been updated within the Healthengine platform.
 
 At this time the only updateable fields are:
+
 - Patient Details:
   - email
   - mobile_phone
@@ -108,7 +119,8 @@ At this time the only updateable fields are:
   - mobile_phone
   - firstname
   - lastname
-  
+- Payment Method
+
 An example payload is shown below.
 
 ```json
@@ -163,7 +175,17 @@ An example payload is shown below.
       {
         "id": "12345"
       },
-    "voucher_code": null | "ABC123"
+    "voucher_code": null | "ABC123",
+    "external_payments": null | {
+      "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
+      "amount": 1700,
+      "refunded": false
+    },
+    "exclusive_scheduling": null | {
+      "client": "Things Inc.",
+      "location": "123 Fake St",
+      "additional_message": "Knock twice and provide secret password"
+    }
   }
 }
 ```
