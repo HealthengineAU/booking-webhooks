@@ -317,6 +317,7 @@ This event is triggered after a booking has been marked as attended on the Healt
 ### `booking-document-attached`
 
 This event is triggered after a booking has had a document attached to it.
+
 At this time, the supported document types are:
 
 - `custom-form` A custom form submission
