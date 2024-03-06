@@ -318,7 +318,10 @@ This event is triggered after a booking has been marked as attended on the Healt
 
 This event is triggered after a booking has had a document attached to it.
 
-At this time, the supported document types are:
+All documents will have an expiry date, after which they will no longer be accessible via the provided url.
+It is expected that any systems receiving this webhook that require future access to the provided document will download the file and store it themselves.
+
+Currently supported document types are:
 
 - `custom-form` A custom form submission
   - `document_name` will hold the name of the form that was submitted
