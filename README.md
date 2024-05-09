@@ -30,11 +30,11 @@ Some general notes and limitations of event webhooks:
 - Webhooks will only be delivered to HTTPS,
 - A webhook subscription must be confirmed before events are sent ([see below](#subscribing-to-an-event)),
 - A response must be received within 5 seconds or the request will be terminated. Any long running process should be triggered asynchronously,
-- The patient gender field is optional. By default it will only be provided if your booking form collects it and if it is required as part of the services you offer. Contact Healthengine support for more information.
 
 ### `booking-submitted`
 
 This event is triggered after a booking has been made within the Healthengine platform. An example payload is shown below.
+Please note that the patient gender field is optional. By default it will only be provided if your booking form collects it and if it is required as part of the services you offer.
 
 ```json
 {
@@ -73,7 +73,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "dob": "1970-01-01",
       "email": "noreply@healthengine.com.au",
       "firstname": "Jane",
-      "gender": null,
+      "gender": null | "Female" | "Male",
       "lastname": "Blogs",
       "medicare":
         null |
