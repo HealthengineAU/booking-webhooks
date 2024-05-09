@@ -74,7 +74,7 @@ Please note that the patient gender field is optional. By default it will only b
       "dob": "1970-01-01",
       "email": "noreply@healthengine.com.au",
       "firstname": "Jane",
-      "gender": null | "Female" | "Male",
+      "gender": null | "Female" | "Male" | "Other",
       "lastname": "Blogs",
       "medicare":
         null |
