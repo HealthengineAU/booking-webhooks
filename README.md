@@ -34,6 +34,7 @@ Some general notes and limitations of event webhooks:
 ### `booking-submitted`
 
 This event is triggered after a booking has been made within the Healthengine platform. An example payload is shown below.
+
 Please note that the patient gender field is optional. By default it will only be provided if your booking form collects it and if it is required as part of the services you offer.
 
 ```json
