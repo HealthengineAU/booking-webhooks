@@ -35,6 +35,7 @@ Some general notes and limitations of event webhooks:
 
 This event is triggered after a booking has been made within the Healthengine platform. An example payload is shown below.
 
+
 ```json
 {
   "version": 1,
@@ -72,6 +73,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "dob": "1970-01-01",
       "email": "noreply@healthengine.com.au",
       "firstname": "Jane",
+      "gender": null | "Female" | "Male" | "Other",
       "lastname": "Blogs",
       "medicare":
         null |
