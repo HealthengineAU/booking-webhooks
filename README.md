@@ -44,7 +44,8 @@ This event is triggered after a booking has been made within the Healthengine pl
     "appointment": {
       "datetime": 1577808000,
       "type": "General Appointment",
-      "specialty": "General Practice"
+      "specialty": "General Practice",
+      "reason": null | "Sore throat",
     },
     "booking_id": "1234",
     "booker": null |
