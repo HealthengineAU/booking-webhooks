@@ -45,7 +45,6 @@ This event is triggered after a booking has been made within the Healthengine pl
       "datetime": 1577808000,
       "type": "General Appointment",
       "specialty": "General Practice",
-      "reason": null | "Sore throat",
     },
     "booking_id": "1234",
     "booker": null |
@@ -91,6 +90,7 @@ This event is triggered after a booking has been made within the Healthengine pl
         "id": "12345"
       },
     "voucher_code": null | "ABC123",
+    "selected_medication": null | "abacavir 300 mg/each",
     "external_payments": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
       "amount": 1700,
