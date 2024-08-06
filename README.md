@@ -71,7 +71,7 @@ This event is triggered after a booking has been made within the Healthengine pl
         "suburb": "Perth"
       },
       "dob": "1970-01-01",
-      "email": "noreply@healthengine.com.au",
+      "email": null | "noreply@healthengine.com.au",
       "firstname": "Jane",
       "gender": null | "Female" | "Male" | "Other",
       "lastname": "Blogs",
@@ -82,7 +82,7 @@ This event is triggered after a booking has been made within the Healthengine pl
           "number": "1",
           "reference": "1234 56789 0"
         },
-      "mobile_phone": "0412345678"
+      "mobile_phone": null | "0412345678"
     },
     "external_user":
       null |
@@ -161,7 +161,7 @@ An example payload is shown below.
         "suburb": "Perth"
       },
       "dob": "1970-01-01",
-      "email": "noreply@healthengine.com.au",
+      "email": null | "noreply@healthengine.com.au",
       "firstname": "Jane",
       "lastname": "Blogs",
       "medicare":
@@ -171,7 +171,7 @@ An example payload is shown below.
           "number": "1",
           "reference": "1234 56789 0"
         },
-      "mobile_phone": "0412345678"
+      "mobile_phone": null | "0412345678"
     },
     "external_user":
       null |
@@ -214,10 +214,10 @@ This event is triggered after a booking has been cancelled on the Healthengine p
         "suburb": "Perth"
       },
       "dob": "1970-01-01",
-      "email": "noreply@healthengine.com.au",
+      "email": null | "noreply@healthengine.com.au",
       "firstname": "Jane",
       "lastname": "Blogs",
-      "mobile_phone": "0412345678"
+      "mobile_phone": null | "0412345678"
     },
     "cancelled_time": 1537809000
   }
@@ -298,7 +298,7 @@ This event is triggered after a booking has been marked as attended on the Healt
         "suburb": "Perth"
       },
       "dob": "1970-01-01",
-      "email": "noreply@healthengine.com.au",
+      "email": null | "noreply@healthengine.com.au",
       "firstname": "Jane",
       "lastname": "Blogs",
       "medicare":
@@ -308,7 +308,7 @@ This event is triggered after a booking has been marked as attended on the Healt
           "number": "1",
           "reference": "1234 56789 0"
         },
-      "mobile_phone": "0412345678"
+      "mobile_phone": null | "0412345678"
     },
     "attended": true | false,
     "attended_changed_at": 1577808000
