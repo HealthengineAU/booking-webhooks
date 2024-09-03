@@ -25,8 +25,8 @@ Some general notes and limitations of event webhooks:
 - Imported bookings from data migrations will not trigger booking webhooks.
 - Due to the highly available and redundant architecture, duplicate webhooks may be sent, including simultaneously,
 - If the HTTP response code is not 2xx or 400, the webhook will be retried,
-- A maximum of 3 retries are made before the webhook is marked as failed,
-- The retries have a backoff strategy of 5 minutes, 1 hour and 12 hours,
+- A maximum of 5 retries are made before the webhook is marked as failed,
+- The retries have a backoff strategy of 1 minute, 2 minutes, 5 minutes, 1 hour, and 12 hours,
 - Webhooks will only be delivered to HTTPS,
 - A webhook subscription must be confirmed before events are sent ([see below](#subscribing-to-an-event)),
 - A response must be received within 5 seconds or the request will be terminated. Any long running process should be triggered asynchronously,
