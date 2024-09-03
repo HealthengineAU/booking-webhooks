@@ -3,7 +3,7 @@
 Documentation for booking webhooks from the Healthengine platform.
 
 ## Australian Privacy Laws
-To comply with Australian Privacy Laws (APPs), webhook endpoints must be located in Australia. This is to ensure adherence to Chapter 8: APP 8 Cross-border disclosure of personal information ([https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information] information). As HealthEngine does not currently support cross-border data transfers, hosting webhook endpoints within Australia is mandatory.
+To comply with Australian Privacy Laws (APPs), webhook endpoints must be located in Australia. This is to ensure adherence to Chapter 8: APP 8 Cross-border disclosure of personal information ([https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information]). As HealthEngine does not currently support cross-border data transfers, hosting webhook endpoints within Australia is mandatory.
 
 ## Synopsis
 
