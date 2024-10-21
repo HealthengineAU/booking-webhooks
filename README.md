@@ -337,7 +337,10 @@ Currently supported document types are:
     "document_name": "Pre-Travel Checklist",
     "download_url": "https://healthengine.com.au/",
     "download_expiry": 1709596800,
-    "created_at": 1709251200
+    "created_at": 1709251200,
+    "practice": {
+      "id": "9876"
+    },
   }
 }
 ```
