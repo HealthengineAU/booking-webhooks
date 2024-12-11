@@ -18,6 +18,7 @@ The table below shows the events that currently support webhooks.
 | [`booking-cancelled`](#booking-cancelled)                             | A booking has been cancelled on the Healthengine platform.                     |
 | [`booking-pre-screening-submitted`](#booking-pre-screening-submitted) | A booking has had a pre-screening form submitted on the Healthengine platform. |
 | [`booking-marked-attended`](#booking-marked-attended)                 | A booking has been marked as attended on the Healthengine platform.            |
+| [`booking-document-attached`](#booking-document-attached)             | A booking has had a document attached to it.                                   |
 
 ## Event Details
 
@@ -315,6 +316,37 @@ This event is triggered after a booking has been marked as attended on the Healt
     },
     "attended": true | false,
     "attended_changed_at": 1577808000
+  }
+}
+```
+
+### `booking-document-attached`
+
+This event is triggered after a booking has had a document attached to it.
+
+All documents will have an expiry date, after which they will no longer be accessible via the provided url.
+It is expected that any systems receiving this webhook that require future access to the provided document will download the file and store it themselves.
+
+Currently supported document types are:
+
+- `custom-form` A custom form submission
+  - `document_name` will hold the name of the form that was submitted
+
+```json
+{
+  "version": 1,
+  "type": "booking-document-attached",
+  "data": {
+    "booking_id": "1234",
+    "document_type": "custom-form",
+    "file_name": "form_pre-travel-checklist_jane-blogs_10afafa3-e694-44f2-a5e1-985a350bc816.pdf",
+    "document_name": "Pre-Travel Checklist",
+    "download_url": "https://healthengine.com.au/",
+    "download_expiry": 1709596800,
+    "created_at": 1709251200,
+    "practice": {
+      "id": "9876"
+    },
   }
 }
 ```
