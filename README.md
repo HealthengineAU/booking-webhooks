@@ -83,8 +83,8 @@ This event is triggered after a booking has been made within the Healthengine pl
         null |
         {
           "expiry": "01/2022",
-          "number": "1",
-          "reference": "1234 56789 0"
+          "number": "1234 56789 0",
+          "reference": "1"
         },
       "mobile_phone": null | "0412345678"
     },
@@ -95,6 +95,15 @@ This event is triggered after a booking has been made within the Healthengine pl
       },
     "voucher_code": null | "ABC123",
     "selected_medication": null | "abacavir 300 mg/each",
+    "antiviral_questions": null | {
+      "are_you_first_nations_with_health_risk": false,
+      "are_you_hospitalised": false,
+      "are_you_over_18": false,
+      "do_you_breast_feed": false,
+      "do_you_have_covid": false,
+      "do_you_have_symptoms": false,
+      "do_you_have_weak_immune_system": false,
+    }
     "external_payments": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
       "amount": 1700,
@@ -172,8 +181,8 @@ An example payload is shown below.
         null |
         {
           "expiry": "01/2022",
-          "number": "1",
-          "reference": "1234 56789 0"
+          "number": "1234 56789 0",
+          "reference": "1"
         },
       "mobile_phone": null | "0412345678"
     },
@@ -183,6 +192,15 @@ An example payload is shown below.
         "id": "12345"
       },
     "voucher_code": null | "ABC123",
+    "antiviral_questions": null | {
+      "are_you_first_nations_with_health_risk": false,
+      "are_you_hospitalised": false,
+      "are_you_over_18": false,
+      "do_you_breast_feed": false,
+      "do_you_have_covid": false,
+      "do_you_have_symptoms": false,
+      "do_you_have_weak_immune_system": false,
+    }
     "external_payments": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
       "amount": 1700,
