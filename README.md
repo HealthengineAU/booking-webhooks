@@ -95,7 +95,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       },
     "voucher_code": null | "ABC123",
     "selected_medication": null | "abacavir 300 mg/each",
-    "antiviral_questions": null | {
+    "additional_patient_questions": null | {
       "are_you_first_nations_with_health_risk": false,
       "are_you_hospitalised": false,
       "are_you_over_18": false,
@@ -192,7 +192,7 @@ An example payload is shown below.
         "id": "12345"
       },
     "voucher_code": null | "ABC123",
-    "antiviral_questions": null | {
+    "additional_patient_questions": null | {
       "are_you_first_nations_with_health_risk": false,
       "are_you_hospitalised": false,
       "are_you_over_18": false,
