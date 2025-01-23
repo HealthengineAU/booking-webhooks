@@ -327,8 +327,8 @@ This event is triggered after a booking has been marked as attended on the Healt
         null |
         {
           "expiry": "01/2022",
-          "number": "1",
-          "reference": "1234 56789 0"
+          "number": "1234 56789 0",
+          "reference": "1"
         },
       "mobile_phone": null | "0412345678"
     },
