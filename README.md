@@ -98,8 +98,8 @@ This event is triggered after a booking has been made within the Healthengine pl
     "additional_patient_questions": null | {
       "are_you_first_nations_with_health_risk": false,
       "are_you_hospitalised": false,
-      "are_you_over_18": false,
-      "do_you_breast_feed": false,
+      "are_you_18_or_over": false,
+      "do_you_breastfeed": false,
       "do_you_have_covid": false,
       "do_you_have_symptoms": false,
       "do_you_have_weak_immune_system": false,
@@ -195,8 +195,8 @@ An example payload is shown below.
     "additional_patient_questions": null | {
       "are_you_first_nations_with_health_risk": false,
       "are_you_hospitalised": false,
-      "are_you_over_18": false,
-      "do_you_breast_feed": false,
+      "are_you_18_or_over": false,
+      "do_you_breastfeed": false,
       "do_you_have_covid": false,
       "do_you_have_symptoms": false,
       "do_you_have_weak_immune_system": false,
