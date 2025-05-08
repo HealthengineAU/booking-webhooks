@@ -123,7 +123,13 @@ This event is triggered after a booking has been made within the Healthengine pl
       "client": "Things Inc.",
       "location": "123 Fake St",
       "additional_message": "Knock twice and provide secret password"
-    }
+    },
+    "external": {
+      "twc": {
+        "external_session_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
+        "external_survey_data": {} | []
+      },
+    },
   }
 }
 ```
