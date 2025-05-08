@@ -50,6 +50,9 @@ This event is triggered after a booking has been made within the Healthengine pl
       "type": "General Appointment",
       "specialty": "General Practice",
     },
+    "telehealth": {
+      "price_type": null | "Standard GP appointment (Level B)"
+    },
     "booking_id": "1234",
     "booker": null |
       {
@@ -88,6 +91,13 @@ This event is triggered after a booking has been made within the Healthengine pl
         },
       "mobile_phone": null | "0412345678"
     },
+    "eligibility": null | {
+        "had_prescription_before": false,
+        "had_side_effects": false,
+        "has_review_booked": false,
+        "has_pregnancy": false
+      },
+    "external_store_id": null | "storeId",
     "external_user":
       null |
       {
@@ -104,7 +114,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "do_you_have_symptoms": false,
       "do_you_have_weak_immune_system": false,
     }
-    "external_payments": null | {
+    "external_payment": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
       "amount": 1700,
       "refunded": false
