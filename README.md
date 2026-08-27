@@ -49,7 +49,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "datetime": 1577808000,
       "type": "General Appointment",
       "specialty": "General Practice",
-      "reason": null | "Reason",
+      "reason": null | "Sample"
     },
     "telehealth": {
       "price_type": null | "Sample"
@@ -68,7 +68,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "timezone": "Australia/Perth",
       "name": "Sample Practice WA",
       "address": {
-        "postcode": "6000",
+        "postcode": "6000"
       },
       "consented_requirement_setting": null | "Sample"
     },
@@ -97,7 +97,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "had_prescription_before": false,
       "had_side_effects": false,
       "has_review_booked": false,
-      "has_pregnancy": false,
+      "has_pregnancy": false
     },
     "external_store_id": null | "Sample",
     "external_user":
@@ -114,7 +114,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "do_you_breastfeed": false,
       "do_you_have_covid": false,
       "do_you_have_symptoms": false,
-      "do_you_have_weak_immune_system": false,
+      "do_you_have_weak_immune_system": false
     },
     "external_payment": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
@@ -126,7 +126,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "location": "123 Fake St",
       "additional_message": null | "Knock twice and provide secret password"
     },
-    "external": null | object,
+    "external": null | object
   }
 }
 ```
@@ -161,7 +161,7 @@ An example payload is shown below.
       "datetime": 1577808000,
       "type": "General Appointment",
       "specialty": "General Practice",
-      "reason": null | "Reason",
+      "reason": null | "Sample"
     },
     "telehealth": {
       "price_type": null | "Sample"
@@ -180,7 +180,7 @@ An example payload is shown below.
       "timezone": "Australia/Perth",
       "name": "Sample Practice WA",
       "address": {
-        "postcode": "6000",
+        "postcode": "6000"
       },
       "consented_requirement_setting": null | "Sample"
     },
@@ -209,7 +209,7 @@ An example payload is shown below.
       "had_prescription_before": false,
       "had_side_effects": false,
       "has_review_booked": false,
-      "has_pregnancy": false,
+      "has_pregnancy": false
     },
     "external_store_id": null | "Sample",
     "external_user":
@@ -226,7 +226,7 @@ An example payload is shown below.
       "do_you_breastfeed": false,
       "do_you_have_covid": false,
       "do_you_have_symptoms": false,
-      "do_you_have_weak_immune_system": false,
+      "do_you_have_weak_immune_system": false
     },
     "external_payment": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
@@ -238,7 +238,7 @@ An example payload is shown below.
       "location": "123 Fake St",
       "additional_message": null | "Knock twice and provide secret password"
     },
-    "external": null | object,
+    "external": null | object
   }
 }
 ```
