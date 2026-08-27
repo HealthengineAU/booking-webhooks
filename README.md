@@ -52,7 +52,7 @@ This event is triggered after a booking has been made within the Healthengine pl
       "reason": null | "Reason",
     },
     "telehealth": {
-      "price_type": "Sample"
+      "price_type": null | "Sample"
     },
     "booking_id": "1234",
     "booker": null |
@@ -160,7 +160,11 @@ An example payload is shown below.
     "appointment": {
       "datetime": 1577808000,
       "type": "General Appointment",
-      "specialty": "General Practice"
+      "specialty": "General Practice",
+      "reason": null | "Reason",
+    },
+    "telehealth": {
+      "price_type": null | "Sample"
     },
     "booking_id": "1234",
     "booker": null |
@@ -178,6 +182,7 @@ An example payload is shown below.
       "address": {
         "postcode": "6000",
       },
+      "consented_requirement_setting": null | "Sample"
     },
     "patient": {
       "address": {
@@ -189,6 +194,7 @@ An example payload is shown below.
       "dob": "1970-01-01",
       "email": null | "noreply@healthengine.com.au",
       "firstname": "Jane",
+      "gender": null | "Female" | "Male" | "Other",
       "lastname": "Blogs",
       "medicare":
         null |
@@ -199,12 +205,20 @@ An example payload is shown below.
         },
       "mobile_phone": null | "0412345678"
     },
+    "eligibility": null | {
+      "had_prescription_before": false,
+      "had_side_effects": false,
+      "has_review_booked": false,
+      "has_pregnancy": false,
+    },
+    "external_store_id": null | "Sample",
     "external_user":
       null |
       {
         "id": "12345"
       },
     "voucher_code": null | "ABC123",
+    "selected_medication": null | "abacavir 300 mg/each",
     "additional_patient_questions": null | {
       "are_you_first_nations_with_health_risk": false,
       "are_you_hospitalised": false,
@@ -222,8 +236,9 @@ An example payload is shown below.
     "exclusive_scheduling": null | {
       "client": "Things Inc.",
       "location": "123 Fake St",
-      "additional_message": "Knock twice and provide secret password"
-    }
+      "additional_message": null | "Knock twice and provide secret password"
+    },
+    "external": null | object,
   }
 }
 ```
