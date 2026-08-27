@@ -3,6 +3,7 @@
 Documentation for booking webhooks from the Healthengine platform.
 
 ## Australian Privacy Laws
+
 To comply with Australian Privacy Principles (or APPs), webhook endpoints must be located in Australia. This is to ensure adherence to Chapter 8: APP 8 Cross-border disclosure of personal information ([https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information]). As Healthengine does not currently support cross-border data transfers, hosting webhook endpoints within Australia is mandatory.
 
 ## Synopsis
@@ -38,7 +39,6 @@ Some general notes and limitations of event webhooks:
 ### `booking-submitted`
 
 This event is triggered after a booking has been made within the Healthengine platform. An example payload is shown below.
-
 
 ```json
 {
@@ -392,7 +392,7 @@ Currently supported document types are:
     "created_at": 1709251200,
     "practice": {
       "id": "9876"
-    },
+    }
   }
 }
 ```
