@@ -3,6 +3,7 @@
 Documentation for booking webhooks from the Healthengine platform.
 
 ## Australian Privacy Laws
+
 To comply with Australian Privacy Principles (or APPs), webhook endpoints must be located in Australia. This is to ensure adherence to Chapter 8: APP 8 Cross-border disclosure of personal information ([https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information]). As Healthengine does not currently support cross-border data transfers, hosting webhook endpoints within Australia is mandatory.
 
 ## Synopsis
@@ -39,7 +40,6 @@ Some general notes and limitations of event webhooks:
 
 This event is triggered after a booking has been made within the Healthengine platform. An example payload is shown below.
 
-
 ```json
 {
   "version": 1,
@@ -49,6 +49,10 @@ This event is triggered after a booking has been made within the Healthengine pl
       "datetime": 1577808000,
       "type": "General Appointment",
       "specialty": "General Practice",
+      "reason": null | "Sample"
+    },
+    "telehealth": {
+      "price_type": null | "Sample"
     },
     "booking_id": "1234",
     "booker": null |
@@ -64,8 +68,9 @@ This event is triggered after a booking has been made within the Healthengine pl
       "timezone": "Australia/Perth",
       "name": "Sample Practice WA",
       "address": {
-        "postcode": "6000",
+        "postcode": "6000"
       },
+      "consented_requirement_setting": null | "Sample"
     },
     "patient": {
       "address": {
@@ -88,6 +93,13 @@ This event is triggered after a booking has been made within the Healthengine pl
         },
       "mobile_phone": null | "0412345678"
     },
+    "eligibility": null | {
+      "had_prescription_before": false,
+      "had_side_effects": false,
+      "has_review_booked": false,
+      "has_pregnancy": false
+    },
+    "external_store_id": null | "Sample",
     "external_user":
       null |
       {
@@ -102,9 +114,9 @@ This event is triggered after a booking has been made within the Healthengine pl
       "do_you_breastfeed": false,
       "do_you_have_covid": false,
       "do_you_have_symptoms": false,
-      "do_you_have_weak_immune_system": false,
-    }
-    "external_payments": null | {
+      "do_you_have_weak_immune_system": false
+    },
+    "external_payment": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
       "amount": 1700,
       "refunded": false
@@ -112,8 +124,9 @@ This event is triggered after a booking has been made within the Healthengine pl
     "exclusive_scheduling": null | {
       "client": "Things Inc.",
       "location": "123 Fake St",
-      "additional_message": "Knock twice and provide secret password"
-    }
+      "additional_message": null | "Knock twice and provide secret password"
+    },
+    "external": null | object
   }
 }
 ```
@@ -147,7 +160,11 @@ An example payload is shown below.
     "appointment": {
       "datetime": 1577808000,
       "type": "General Appointment",
-      "specialty": "General Practice"
+      "specialty": "General Practice",
+      "reason": null | "Sample"
+    },
+    "telehealth": {
+      "price_type": null | "Sample"
     },
     "booking_id": "1234",
     "booker": null |
@@ -163,8 +180,9 @@ An example payload is shown below.
       "timezone": "Australia/Perth",
       "name": "Sample Practice WA",
       "address": {
-        "postcode": "6000",
+        "postcode": "6000"
       },
+      "consented_requirement_setting": null | "Sample"
     },
     "patient": {
       "address": {
@@ -176,6 +194,7 @@ An example payload is shown below.
       "dob": "1970-01-01",
       "email": null | "noreply@healthengine.com.au",
       "firstname": "Jane",
+      "gender": null | "Female" | "Male" | "Other",
       "lastname": "Blogs",
       "medicare":
         null |
@@ -186,12 +205,20 @@ An example payload is shown below.
         },
       "mobile_phone": null | "0412345678"
     },
+    "eligibility": null | {
+      "had_prescription_before": false,
+      "had_side_effects": false,
+      "has_review_booked": false,
+      "has_pregnancy": false
+    },
+    "external_store_id": null | "Sample",
     "external_user":
       null |
       {
         "id": "12345"
       },
     "voucher_code": null | "ABC123",
+    "selected_medication": null | "abacavir 300 mg/each",
     "additional_patient_questions": null | {
       "are_you_first_nations_with_health_risk": false,
       "are_you_hospitalised": false,
@@ -199,9 +226,9 @@ An example payload is shown below.
       "do_you_breastfeed": false,
       "do_you_have_covid": false,
       "do_you_have_symptoms": false,
-      "do_you_have_weak_immune_system": false,
-    }
-    "external_payments": null | {
+      "do_you_have_weak_immune_system": false
+    },
+    "external_payment": null | {
       "external_payment_id": "06019f23-5d22-4310-9a7e-304f5e7361dd",
       "amount": 1700,
       "refunded": false
@@ -209,8 +236,9 @@ An example payload is shown below.
     "exclusive_scheduling": null | {
       "client": "Things Inc.",
       "location": "123 Fake St",
-      "additional_message": "Knock twice and provide secret password"
-    }
+      "additional_message": null | "Knock twice and provide secret password"
+    },
+    "external": null | object
   }
 }
 ```
@@ -364,7 +392,7 @@ Currently supported document types are:
     "created_at": 1709251200,
     "practice": {
       "id": "9876"
-    },
+    }
   }
 }
 ```
