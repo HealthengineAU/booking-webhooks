@@ -397,6 +397,45 @@ Currently supported document types are:
 }
 ```
 
+## Minimal Payloads
+
+A webhook subscription can be configured to send minimal payloads. Every event keeps the same `version` and `type`, but `data` only includes the following fields when present on that event; all other fields are omitted:
+
+- `booking_id`, `manage_booking_url`
+- `appointment.datetime`, `appointment.type`, `appointment.specialty`
+- `practice.id`, `practice.name`, `practice.timezone`
+- `patient.firstname`, `patient.lastname`, `patient.dob`
+- `cancelled_time` (`booking-cancelled`)
+- `attended`, `attended_changed_at` (`booking-marked-attended`)
+- `submitted_at` (`booking-pre-screening-submitted`)
+- `document_type`, `document_name`, `created_at` (`booking-document-attached`)
+
+```json
+{
+  "version": 1,
+  "type": "booking-submitted",
+  "data": {
+    "appointment": {
+      "datetime": 1577808000,
+      "type": "General Appointment",
+      "specialty": "General Practice"
+    },
+    "booking_id": "1234",
+    "manage_booking_url": "https://healthengine.com.au/",
+    "practice": {
+      "id": "9876",
+      "name": "Sample Practice WA",
+      "timezone": "Australia/Perth"
+    },
+    "patient": {
+      "dob": "1970-01-01",
+      "firstname": "Jane",
+      "lastname": "Blogs"
+    }
+  }
+}
+```
+
 ## Expected Responses
 
 - Any 2xx response code will be treated as successful, any body returned will be discarded.
