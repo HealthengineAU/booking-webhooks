@@ -404,11 +404,12 @@ A webhook subscription can be configured to send minimal payloads. Every event k
 - `booking_id`, `manage_booking_url`
 - `appointment.datetime`, `appointment.type`, `appointment.specialty`
 - `practice.id`, `practice.name`, `practice.timezone`
-- `patient.firstname`, `patient.lastname`, `patient.dob`
+- `patient.firstname`, `patient.lastname`, `patient.dob`, `patient.email`, `patient.mobile_phone`
 - `cancelled_time` (`booking-cancelled`)
 - `attended`, `attended_changed_at` (`booking-marked-attended`)
 - `submitted_at` (`booking-pre-screening-submitted`)
-- `document_type`, `document_name`, `created_at` (`booking-document-attached`)
+
+`booking-document-attached` only includes `booking_id` and `practice.id`.
 
 ```json
 {
@@ -429,8 +430,10 @@ A webhook subscription can be configured to send minimal payloads. Every event k
     },
     "patient": {
       "dob": "1970-01-01",
+      "email": "noreply@healthengine.com.au",
       "firstname": "Jane",
-      "lastname": "Blogs"
+      "lastname": "Blogs",
+      "mobile_phone": "0412345678"
     }
   }
 }
