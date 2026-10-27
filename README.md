@@ -399,9 +399,9 @@ Currently supported document types are:
 
 ## Field Filtering
 
-A `booking-submitted`, `booking-updated` or `booking-cancelled` webhook subscription can be configured to send only selected fields. Every event keeps the same `version` and `type`, but `data` only includes the selected fields; all other fields are omitted.
+Any webhook subscription can be configured to send only selected fields. Every event keeps the same `version` and `type`, but `data` only includes the selected fields; all other fields are omitted.
 
-The default minimal selection is:
+`booking-submitted`, `booking-updated` and `booking-cancelled` have a default minimal selection:
 
 - `booking_id`, `manage_booking_url`
 - `appointment.datetime`, `appointment.type`, `appointment.specialty`
