@@ -399,17 +399,13 @@ Currently supported document types are:
 
 ## Minimal Payloads
 
-A webhook subscription can be configured to send minimal payloads. Every event keeps the same `version` and `type`, but `data` only includes the following fields when present on that event; all other fields are omitted:
+A `booking-submitted`, `booking-updated` or `booking-cancelled` webhook subscription can be configured to send minimal payloads. Every event keeps the same `version` and `type`, but `data` only includes the following fields when present on that event; all other fields are omitted:
 
 - `booking_id`, `manage_booking_url`
 - `appointment.datetime`, `appointment.type`, `appointment.specialty`
 - `practice.id`, `practice.name`, `practice.timezone`
 - `patient.firstname`, `patient.lastname`, `patient.dob`, `patient.email`, `patient.mobile_phone`
 - `cancelled_time` (`booking-cancelled`)
-- `attended`, `attended_changed_at` (`booking-marked-attended`)
-- `submitted_at` (`booking-pre-screening-submitted`)
-
-`booking-document-attached` only includes `booking_id` and `practice.id`.
 
 ```json
 {
