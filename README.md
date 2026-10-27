@@ -403,10 +403,10 @@ Any webhook subscription can be configured to send only selected fields. Every e
 
 `booking-submitted`, `booking-updated` and `booking-cancelled` have a default minimal selection:
 
-- `booking_id`, `manage_booking_url`
-- `appointment.datetime`, `appointment.type`, `appointment.specialty`
-- `practice.id`, `practice.name`, `practice.timezone`
-- `patient.firstname`, `patient.lastname`, `patient.dob`, `patient.email`, `patient.mobile_phone`
+- `booking_id`
+- `appointment.datetime` (not on `booking-cancelled`)
+- `practice.id`, `practice.name` (`practice.name` not on `booking-cancelled`)
+- `patient.firstname`, `patient.lastname`, `patient.email`, `patient.mobile_phone`
 - `cancelled_time` (`booking-cancelled`)
 
 ```json
@@ -415,19 +415,14 @@ Any webhook subscription can be configured to send only selected fields. Every e
   "type": "booking-submitted",
   "data": {
     "appointment": {
-      "datetime": 1577808000,
-      "type": "General Appointment",
-      "specialty": "General Practice"
+      "datetime": 1577808000
     },
     "booking_id": "1234",
-    "manage_booking_url": "https://healthengine.com.au/",
     "practice": {
       "id": "9876",
-      "name": "Sample Practice WA",
-      "timezone": "Australia/Perth"
+      "name": "Sample Practice WA"
     },
     "patient": {
-      "dob": "1970-01-01",
       "email": "noreply@healthengine.com.au",
       "firstname": "Jane",
       "lastname": "Blogs",
