@@ -397,6 +397,41 @@ Currently supported document types are:
 }
 ```
 
+## Field Filtering
+
+Any webhook subscription can be configured to send only selected fields. Every event keeps the same `version` and `type`, but `data` only includes the selected fields; all other fields are omitted.
+
+`booking-submitted`, `booking-updated` and `booking-cancelled` have a default minimal selection:
+
+- `booking_id`
+- `appointment.datetime` (not on `booking-cancelled`)
+- `practice.id`, `practice.name` (`practice.name` not on `booking-cancelled`)
+- `patient.firstname`, `patient.lastname`, `patient.email`, `patient.mobile_phone`
+- `cancelled_time` (`booking-cancelled`)
+
+```json
+{
+  "version": 1,
+  "type": "booking-submitted",
+  "data": {
+    "appointment": {
+      "datetime": 1577808000
+    },
+    "booking_id": "1234",
+    "practice": {
+      "id": "9876",
+      "name": "Sample Practice WA"
+    },
+    "patient": {
+      "email": "noreply@healthengine.com.au",
+      "firstname": "Jane",
+      "lastname": "Blogs",
+      "mobile_phone": "0412345678"
+    }
+  }
+}
+```
+
 ## Expected Responses
 
 - Any 2xx response code will be treated as successful, any body returned will be discarded.
